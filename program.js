@@ -12,7 +12,7 @@ app.get('/:date?', function(req, res) {
 	  		var written_date = new Date(unknown_date*1000);
 	  		if (isNaN(written_date ))
 	  		{
-	  			res.end("Wrong entry, please retry")
+	  			res.send(JSON.stringify({"date": null, "unix time": null},  null, '\t'));
 	  		}
 	  		var unix_time = unknown_date;
 	  	} 
