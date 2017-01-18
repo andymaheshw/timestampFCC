@@ -1,5 +1,6 @@
 var express = require('express')
 var app = express()
+var port = process.env.PORT || 8080;
 
 app.get('/:date?', function(req, res) {
 	  var unknown_date = req.params.date;
@@ -36,4 +37,4 @@ app.get('/:date?', function(req, res) {
       res.end("Please add a date to the parameter string above");
 
   });
-app.listen(3000);
+app.listen(port);
